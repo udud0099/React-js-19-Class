@@ -1,0 +1,34 @@
+.card {
+  color: rgb(39, 39, 39);
+  width: 20%;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 5px 5px 5px rgb(230, 230, 230);
+  margin: 1.5%;
+  transition: 0.4s;
+  display: inline-block;
+}
+.card:hover {
+  transition: 0.4s;
+  width: 21%;
+}
+.card:hover .cardText h1 {
+  font-size: 2.2rem;
+  transition: 0.4s;
+  color: rgb(14, 14, 14);
+}
+.cardImg {
+  width: 100%;
+  border-radius: 4px;
+  overflow: hidden;
+}
+.cardImg img {
+  width: 100%;
+}
+.cardText {
+  padding: 10px 0;
+}
+.cardText h1 {
+  color: rgb(31, 31, 31);
+  font-size: 2rem;
+}
