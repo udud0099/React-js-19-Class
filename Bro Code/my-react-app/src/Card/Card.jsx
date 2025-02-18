@@ -1,6 +1,5 @@
 import React from "react";
-import style from "./Card.module.css";
-import PropTypes from "prop-types";
+import style from "./Card.module.css"; 
 
 const Card = ({ imgSrc, imgAlt, dogName, rate, weiht }) => {
   return (
