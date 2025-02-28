@@ -11,6 +11,10 @@ const ToDoListMy = () => {
 
   function addToDo() {
     let newTask = document.getElementById("addToDo").value;
+    if (newTask.trim() == "") {
+      document.getElementById("addToDo").value = "";
+      return;
+    }
 
     setTasks((t) => [newTask, ...t]);
 
@@ -22,7 +26,7 @@ const ToDoListMy = () => {
   function moveUp(i) {
     // console.log("print", tasks[i]);
     if (i == 0) {
-      console.log("print", tasks[i]);
+      // console.log("print", tasks[i]);
       return;
     }
 
