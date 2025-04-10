@@ -1,0 +1,35 @@
+.hero {
+  height: 90vh;
+}
+.heroB {
+  align-items: center;
+  margin: auto;
+  padding: 50px 0;
+}
+.heroL h1 {
+  font-size: 96px;
+  font-weight: 800;
+  color: black;
+}
+.heroL p {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 30px;
+  color: gray;
+}
+.heroL button {
+  margin-right: 30px;
+  margin-bottom: 30px;
+}
+.heroL span {
+  font-size: 12px;
+  color: gray;
+  margin-bottom: 10px;
+  display: block;
+}
+.heroL img {
+  margin-right: 20px;
+}
+.heroR img {
+  height: 100%;
+}

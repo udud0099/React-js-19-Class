@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <style>
+      .mystyle {
+        color: red;
+        font-size: 100px;
+      }
+    </style>
+    <h1>Try objects</h1>
+    <p id="test"></p>
+
+    <script>
+      let a = {
+        name: "ok",
+        age: 99,
+        live: true,
+      };
+      document.getElementById("test").innerHTML = a.live;
+      if (a.live) {
+        document.getElementById("test").classList.add("mystyle");
+      }
+    </script>
+  </body>
+</html>

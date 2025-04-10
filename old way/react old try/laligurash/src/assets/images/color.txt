@@ -1,0 +1,4 @@
+bg : 140000
+green : 005400
+red : FF003C
+lightGreen : 00B21B

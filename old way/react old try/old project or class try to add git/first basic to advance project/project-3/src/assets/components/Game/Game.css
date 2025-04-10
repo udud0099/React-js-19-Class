@@ -1,0 +1,8 @@
+.allnumber .active {
+  border: none;
+  background-color: black;
+  color: white;
+}
+#warning {
+  display: none;
+}

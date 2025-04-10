@@ -1,0 +1,19 @@
+.welcome {
+  height: 95vh;
+}
+.heroImg,
+.heroSec {
+  margin: auto 0;
+  vertical-align: bottom;
+  height: 100%;
+  text-align: right;
+  padding: 150px 0;
+}
+.heroSec h1 {
+  font-size: 124px;
+  font-weight: 800;
+}
+.heroSec button {
+  font-size: 32px;
+  padding: 10px 50px;
+}

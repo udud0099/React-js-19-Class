@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	
+	
+
+
+
+	</style>
+</head>
+<body>
+	<h1 class="heads">Hello Bro</h1>
+	<p id="prs" class="myClass" onclick="clickas()"  value="2">This is paragraph</p>
+	<!-- <button onclick="clickas()">as</button> -->
+
+	<script>
+		function clickas(){
+
+			let element = document.querySelector("#prs").getAttribute("value");
+			console.log(element)
+		}
+
+		console.log(document.body.innerHTML)
+	</script>
+
+</body>
+</html>

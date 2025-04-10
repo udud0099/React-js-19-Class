@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	
+	
+
+
+
+	</style>
+</head>
+<body>
+	<h1 class="heads">Hello Bro</h1>
+	<p id="prs" class="myClass" onclick="clickas()"  value="2">This is paragraph</p>                                                  
+	<!-- <button onclick="clickas()">as</button> -->
+
+	<script>
+		setInterval(function() {
+			let date = new Date().toLocaleTimeString()
+			console.log(date)
+			document.getElementById("prs").innerText = date
+		},1000)
+
+		// or 
+		let getTime = setInterval(curTime, 1000)
+		function curTime(){
+			let time = new Date().toLocaleTimeString()
+			console.log(time)
+		}
+
+		
+	</script>
+
+</body>
+</html>

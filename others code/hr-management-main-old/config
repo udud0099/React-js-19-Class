@@ -1,0 +1,464 @@
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  darkMode: [
+    "variant",
+    [
+      "@media (prefers-color-scheme: dark) { &:not(.light *) }",
+      "&:is(.dark *)",
+    ],
+    "class",
+  ],
+  content: [
+    "./pages/**/*.{js,jsx}",
+    "./components/**/*.{js,jsx}",
+    "./app/**/*.{js,jsx}",
+    "./src/**/*.{js,jsx}",
+  ],
+  prefix: "",
+  theme: {
+  	screens: {
+  		xxs: '360px',
+  		xs: '430px',
+  		xsm: '576px',
+  		sm: '640px',
+  		md: '768px',
+  		mg: '992px',
+  		lg: '1024px',
+  		xl: '1280px',
+  		'2xl': '1536px',
+  		'3xl': '1600px'
+  	},
+  	container: {
+  		padding: {
+  			DEFAULT: '1rem',
+  			md: '2.188rem',
+  			xl: '3.438rem'
+  		},
+  		screens: {
+  			'2xl': '1400px'
+  		}
+  	},
+  	extend: {
+  		aspectRatio: {
+  			auto: 'auto',
+  			square: '1 / 1',
+  			video: '16 / 9',
+  			image: '20 / 19'
+  		},
+  		fontFamily: {
+  			heading: [
+  				'var(--font-heading)',
+  				'ui-sans-serif',
+  				'-apple-system',
+  				'BlinkMacSystemFont',
+  				'Segoe UI Variable Display',
+  				'Segoe UI',
+  				'Helvetica',
+  				'Apple Color Emoji',
+  				'Arial',
+  				'sans-serif',
+  				'Segoe UI Emoji',
+  				'Segoe UI Symbol',
+  				'Noto Color Emoji'
+  			],
+  			mono: [
+  				'var(--font-mono)',
+  				...require("tailwindcss/defaultTheme").fontFamily.mono
+  			],
+  			sans: [
+  				'var(--font-sans)',
+  				'ui-sans-serif',
+  				'-apple-system',
+  				'BlinkMacSystemFont',
+  				'Segoe UI Variable Display',
+  				'Segoe UI',
+  				'Helvetica',
+  				'Apple Color Emoji',
+  				'Arial',
+  				'sans-serif',
+  				'Segoe UI Emoji',
+  				'Segoe UI Symbol',
+  				'Noto Color Emoji'
+  			]
+  		},
+  		fontSize: {
+  			pageExtraLarge: '2.375rem',
+  			pageTitle: '2rem',
+  			sectionTitle: '1.6875rem',
+  			sectionSubTitle: '1.375rem',
+  			bodyText: '1.1875rem',
+  			bodyTextSmall: '1rem',
+  			displayLarge: '3.5625rem',
+  			displayMedium: '2.8125rem',
+  			displaySmall: '2.25rem',
+  			headlineLarge: '2rem',
+  			headlineMedium: '1.75rem',
+  			headlineSmall: '1.5rem',
+  			titleLarge: '1.5rem',
+  			titleMediumLarge: '1.125rem',
+  			titleMedium: '1rem',
+  			titleSmall: '0.875rem',
+  			labelLarge: '0.875rem',
+  			labelMedium: '0.75rem',
+  			labelSmall: '0.625rem',
+  			bodyLarge: '1rem',
+  			bodyMedium: '0.875rem',
+  			bodyMediumSmall: '0.813rem',
+  			bodySmall: '0.75rem',
+  			bodyExtraSmall: '0.5rem'
+  		},
+  		fontWeight: {
+  			extralight: '200',
+  			light: '300',
+  			regular: '400',
+  			medium: '500',
+  			semibold: '600',
+  			bold: '700'
+  		},
+  		backgroundImage: {
+			'message-gradient': 'linear-gradient(to right bottom, #ebf4f5, #d9eaee, #cadfea, #bdd3e5, #b5c6e0)',
+  			'ai-gradient': 'linear-gradient(90deg, #7F7FD5 -7.79%, #86A8E7 42.7%, #91EAE4 117.53%)',
+  			'custom-gradient': 'linear-gradient(274deg, rgba(254, 241, 241, 0.8) 13.43%, rgba(234, 239, 254, 0.8) 97.99%)',
+  			'billing-gradient': 'linear-gradient(0deg, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0.03) 100%), linear-gradient(106deg, #1B47FF -11.63%, #7895FF 98%)'
+  		},
+  		boxShadow: {
+  			custom: '1px 1px 4px 0px rgba(0, 0, 0, 0.09)',
+  			custom2: '1px 1px 15px 0px rgba(0, 0, 0, 0.10)',
+  			custom3: '-15px 0px 44px 10px rgba(248,248,248,1)',
+  			custom4: '15px 0px 44px 10px rgba(248,248,248,1)',
+  			'all-sm': '0 0 5px 0 rgba(0, 0, 0, 0.1)',
+  			'all-md': '0 0 10px 0 rgba(0, 0, 0, 0.1)',
+  			'all-lg': '0 0 15px 0 rgba(0, 0, 0, 0.1)',
+  			'all-xl': '0 0 20px 0 rgba(0, 0, 0, 0.2)',
+  			'all-2xl': '0 0 25px 0 rgba(0, 0, 0, 0.2)',
+  			hover: '0 0 15px 0 rgba(0, 0, 0, 0.2)'
+  		},
+  		colors: {
+  			primaryBlack: '#191b22',
+  			buttonColor: {
+  				arrowBg: '#e8e8ed',
+  				closeBg: '#f8f8f8'
+  			},
+  			custom: {
+  				copilotSecondary: '#8490B4',
+  				primary: '#191b22',
+  				primary90: '#DAE2FF',
+  				secondary30: '#3A4666',
+  				secondary40: '#525E7F',
+  				neutral20: '#303034',
+  				neutral35: '#525256',
+  				neutral40: '#5E5E62',
+  				neutral50: '#77777A',
+  				neutral60: '#919094',
+  				neutral90: '#E4E2E6',
+  				neutral95: '#F2F0F4',
+  				variant90: '#E1E2EC',
+  				danger: '#C83200',
+  				darkHigh: '#F8F8F8',
+  				darkMedium: '#202224',
+  				darkLight: '#FAFAFA',
+  				blue: '#006AFF',
+  				blueLight: '#9DC4FC',
+  				blueLighter: '#EBF2FC',
+  				blueLightest: '#c9ddfa',
+  				blueVariant: '#9AC3FD',
+  				blueVariantLight: '#F1F6FB',
+  				outlineVariant: '#C2C6D8',
+  				error: '#BA1A1A',
+  				warningLight: '#ffebd0',
+  				warning: '#ff7700',
+  				bgLight: '#f5f6f9',
+  				success: '#6ad97a',
+  				warningVariant: '#fd9348',
+  				dangerVariant: '#e13739',
+  				blue60: '#5b8cff',
+  				gray200: '#F2F2F2',
+  				blueVariant2: '#CAE0FD',
+  				greenVariant2: '#DEECCA',
+  				purpleVariant2: '#D8D5F9',
+  				surfaceTint: '#0056D1',
+  				surfaceVariant: '#424655',
+  				surfaceContainerHigh: '#E6E7F4',
+  				lightContrast: '#ACAAAF',
+  				skeleton: '#ebebeb',
+  				textSecondary: '#6A6A6A'
+  			},
+  			schemesError: {
+  				light: '#ba1a1a',
+  				lightHighContrast: '#4e0002',
+  				lightMediumContrast: '#8c0009',
+  				dark: '#ffb4ab'
+  			},
+  			schemes: {
+  				primary: '#006AFF',
+  				primaryVariant: '#5B8FF9',
+  				lightContrast: '#ACAAAF',
+  				lightHighContrast: '#E1E1E2',
+  				lightText: '#3F3229',
+  				lightMediumContrast: '#424655',
+  				icon: '#3F3630',
+  				successText: '#007C05',
+  				dangerText: '#DE3730',
+  				warningText: '#E89F29',
+  				dark: '#000000',
+  				bgLight: '#C2C6D8',
+  				textLight: '#191B22',
+  				bgDarkLight: '#FBFBFB',
+  				bgDarkMedium: '#F1F6FB',
+  				bgDarkHigh: '#F8F8F8',
+  				mutedText: '#77777A',
+  				bgCard: '#0056D10D',
+  				card1: '#D8E2FC',
+  				card2: '#F9E0E1',
+  				card3: '#DAEAEA',
+  				card4: '#F0E5FF',
+  				circle: '#E4E2E6',
+  				badgePrimary: '#E89F29',
+  				badgeForeground: '#FFF0D9'
+  			},
+  			schemesPrimary: {
+  				light: '#495d92',
+  				lightHighContrast: '#041f51',
+  				lightMediumContrast: '#2c4174',
+  				dark: '#b2c5ff'
+  			},
+  			schemesErrorContainer: {
+  				light: '#ffdad6',
+  				lightHighContrast: '#8c0009',
+  				lightMediumContrast: '#da342e',
+  				dark: '#93000a'
+  			},
+  			border: 'hsl(var(--border))',
+  			input: 'hsl(var(--input))',
+  			ring: 'hsl(var(--ring))',
+  			background: 'hsl(var(--background))',
+  			foreground: 'hsl(var(--foreground))',
+  			primary: {
+  				DEFAULT: 'hsl(var(--primary))',
+  				foreground: 'hsl(var(--primary-foreground))'
+  			},
+  			secondary: {
+  				DEFAULT: 'hsl(var(--secondary))',
+  				foreground: 'hsl(var(--secondary-foreground))'
+  			},
+  			destructive: {
+  				DEFAULT: 'hsl(var(--destructive))',
+  				foreground: 'hsl(var(--destructive-foreground))'
+  			},
+  			muted: {
+  				DEFAULT: 'hsl(var(--muted))',
+  				foreground: 'hsl(var(--muted-foreground))'
+  			},
+  			accent: {
+  				DEFAULT: 'hsl(var(--accent))',
+  				foreground: 'hsl(var(--accent-foreground))'
+  			},
+  			popover: {
+  				DEFAULT: 'hsl(var(--popover))',
+  				foreground: 'hsl(var(--popover-foreground))'
+  			},
+  			card: {
+  				DEFAULT: 'hsl(var(--card))',
+  				foreground: 'hsl(var(--card-foreground))'
+  			},
+  			sidebar: {
+  				DEFAULT: 'hsl(var(--sidebar-background))',
+  				foreground: 'hsl(var(--sidebar-foreground))',
+  				primary: 'hsl(var(--sidebar-primary))',
+  				'primary-foreground': 'hsl(var(--sidebar-primary-foreground))',
+  				accent: 'hsl(var(--sidebar-accent))',
+  				'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
+  				border: 'hsl(var(--sidebar-border))',
+  				ring: 'hsl(var(--sidebar-ring))'
+  			},
+  			chart: {
+  				'1': 'hsl(var(--chart-1))',
+  				'2': 'hsl(var(--chart-2))',
+  				'3': 'hsl(var(--chart-3))',
+  				'4': 'hsl(var(--chart-4))',
+  				'5': 'hsl(var(--chart-5))'
+  			},
+  			brand: {
+  				DEFAULT: 'hsl(var(--brand))',
+  				foreground: 'hsl(var(--brand-foreground))'
+  			},
+  			highlight: {
+  				DEFAULT: 'hsl(var(--highlight))',
+  				foreground: 'hsl(var(--highlight-foreground))'
+  			}
+  		},
+  		borderRadius: {
+  			xl: 'calc(var(--radius) + 4px)',
+  			lg: 'var(--radius)',
+  			md: 'calc(var(--radius) - 2px)',
+  			sm: 'calc(var(--radius) - 4px)'
+  		},
+  		keyframes: {
+  			sparkle: {
+  				'0%, 100%': {
+  					opacity: '0.75',
+  					scale: '0.9'
+  				},
+  				'50%': {
+  					opacity: '1',
+  					scale: '1'
+  				}
+  			},
+  			'accordion-down': {
+  				from: {
+  					height: '0'
+  				},
+  				to: {
+  					height: 'var(--radix-accordion-content-height)'
+  				}
+  			},
+  			'accordion-up': {
+  				from: {
+  					height: 'var(--radix-accordion-content-height)'
+  				},
+  				to: {
+  					height: '0'
+  				}
+  			},
+  			streaming: {
+  				'0%': {
+  					transform: 'translateX(100%)'
+  				},
+  				'100%': {
+  					transform: 'translateX(-100%)'
+  				}
+  			},
+  			'increase-width': {
+  				from: {
+  					transform: 'scaleX(0.15)',
+  					transformOrigin: 'right'
+  				},
+  				to: {
+  					transform: 'scaleX(1)',
+  					transformOrigin: 'right'
+  				}
+  			},
+  			'expand-width': {
+  				from: {
+  					width: '0'
+  				},
+  				to: {
+  					width: '100%'
+  				}
+  			},
+  			'collapse-width': {
+  				from: {
+  					width: '100%'
+  				},
+  				to: {
+  					width: '0'
+  				}
+  			},
+  			pulseMarker: {
+  				'0%': {
+  					transform: 'scale(1)',
+  					opacity: '0.8'
+  				},
+  				'100%': {
+  					transform: 'scale(2.5)',
+  					opacity: '0'
+  				}
+  			},
+  			zoomSpring: {
+  				'0%': {
+  					transform: 'scale(1)'
+  				},
+  				'50%': {
+  					transform: 'scale(1.1)'
+  				},
+  				'100%': {
+  					transform: 'scale(1)'
+  				}
+  			},
+  			slideInFromOffset: {
+  				'0%': {
+  					transform: 'translate(-50%, calc(-50% + 10%))',
+  					opacity: '0'
+  				},
+  				'100%': {
+  					transform: 'translate(-50%, -50%)',
+  					opacity: '1'
+  				}
+  			},
+  			slideOutToOffset: {
+  				'0%': {
+  					transform: 'translate(-50%, -50%)',
+  					opacity: '1'
+  				},
+  				'100%': {
+  					transform: 'translate(-50%, calc(-50% + 10%))',
+  					opacity: '0'
+  				}
+  			},
+  			'overlay-in': {
+  				'0%': {
+  					opacity: '0'
+  				},
+  				'100%': {
+  					opacity: '1'
+  				}
+  			},
+  			'overlay-out': {
+  				'0%': {
+  					opacity: '1'
+  				},
+  				'100%': {
+  					opacity: '0'
+  				}
+  			}
+  		},
+  		animation: {
+  			sparkle: 'sparkle 2s ease-in-out infinite',
+  			'accordion-down': 'accordion-down 0.2s ease-out',
+  			'accordion-up': 'accordion-up 0.2s ease-out',
+  			streaming: 'streaming 5s linear infinite',
+  			'increase-width': 'increase-width 0.6s ease-in-out',
+  			'expand-width': 'expand-width 0.2s ease-out forwards',
+  			'collapse-width': 'collapse-width 0.2s ease-out forwards',
+  			pulseMarker: 'pulseMarker 1.5s infinite',
+  			zoomSpring: 'zoomSpring 0.5s ease-in forwards',
+  			'slide-in-from-offset': 'slideInFromOffset 0.2s ease-out',
+  			'slide-out-to-offset': 'slideOutToOffset 0.2s ease-in',
+  			'overlay-in': 'overlay-in 0.2s ease-in-out',
+  			'overlay-out': 'overlay-out 0.2s ease-in-out'
+  		},
+  		screens: {
+  			'main-hover': {
+  				raw: '(hover: hover)'
+  			}
+  		}
+  	}
+  },
+  plugins: [
+    require("@tailwindcss/aspect-ratio"),
+    require("tailwindcss-animate"),
+    function ({ addUtilities }) {
+      const newUtilities = {
+        ".scroll-bar-thin": {
+          scrollbarWidth: "thin",
+          scrollbarColor: "#006AFF white",
+          msOverflowStyle: "-ms-autohiding-scrollbar",
+        },
+        ".scrollbar-webkit": {
+          "&::-webkit-scrollbar": {
+            width: "6px",
+          },
+          "&::-webkit-scrollbar-track": {
+            backgroundColor: "#006AFF",
+          },
+          "&::-webkit-scrollbar-thumb": {
+            backgroundColor: "#FFFFFF",
+            borderRadius: "6px",
+          },
+        },
+      };
+      addUtilities(newUtilities, ["responsive", "hover"]);
+    },
+      require("tailwind-scrollbar-hide")
+],
+};

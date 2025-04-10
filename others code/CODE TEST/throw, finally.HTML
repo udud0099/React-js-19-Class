@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	
+	
+
+
+
+	</style>
+</head>
+<body>
+	<h1>js</h1>
+	<input type="text" id="inp" name="" id="">
+	<button onclick="myFun()">click hear</button>
+
+	<script>
+		
+		function myFun(){
+			let x = document.getElementById("inp").value;
+			try{
+				if(x == "") throw "plz input the number 5 to 20";
+				if(isNaN(x)) throw "plz give number value 5 to 20";
+				if(x < 5 ) throw "plz give bigger or eaqle value 5";
+				if(x>20 ) throw "plz give less or eaqle value 20";
+				else{
+					document.querySelector("h1").innerHTML = "Number is " + x
+				}
+			}catch(err){
+				console.log(err)
+			}finally{
+				console.log("task completed")
+			}
+		}
+
+		
+	</script>
+
+</body>
+</html>
