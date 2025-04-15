@@ -3,7 +3,17 @@ import 'aos/dist/aos.css'
 import React, { useEffect, useState } from 'react' 
 import Banner from './Components/Banner/Banner'
 import Navbar from './Components/Navbar/Navbar'
-// import './App.css'
+
+ 
+import Hero from "./Components/Hero/Hero";
+import Products from "./Components/Products/Products"; 
+import TopProducts from "./Components/TopProducts/TopProducts";
+ 
+import Subscribe from "./Components/Subscribe/Subscribe";
+import Testimonials from "./Components/Testimonials/Testimonials";
+import Footer from "./Components/Footer/Footer";
+import Popup from "./Components/Popup/Popup";
+import './App.css'
 
 function App() { 
   const [orderPopup, setOrderPopup] = useState(false)
@@ -25,8 +35,16 @@ function App() {
   return (
     <>
       <div className='bg-white dark:bg-gray-900 dark:text-white duration-200' >
-        {/* <Banner /> */}
-        <Navbar />
+        <Navbar handelOrderPopup={handelOrderPopup}/>
+        <Hero handelOrderPopup={handelOrderPopup} />
+      <Products />
+      <TopProducts handelOrderPopup={handelOrderPopup} />
+      <Banner /> 
+
+      <Subscribe />
+      <Testimonials />
+      <Footer />
+      <Popup orderPopup={orderPopup} setOrderPopup={setOrderPopup} /> 
         
 
       </div>
